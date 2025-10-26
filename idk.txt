@@ -1,0 +1,24 @@
+This is the first bit in app.js file
+
+/*To change it to run serve html files change this next code
+To this:
+
+app.use(express.static("public"));
+*/
+
+// Define a route for the homepage
+app.get("/", (req, res) => {
+    res.send("<h1>Hello from Express!</h1><p>This is your first Express app 🚀</p>");
+});
+
+// Add another route
+app.get("/about", (req, res) => {
+    res.send("<h1>About Page</h1><p>This site runs on Express.js.</p>");
+});
+
+//Replace up to here 
+
+// Start the server on port 3000
+app.listen(3000, () => {
+    console.log("Express server running at http://localhost:3000");
+});
